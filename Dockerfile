@@ -65,6 +65,6 @@ RUN adduser \
 USER appuser
 # Setup your variables before running.
 ARG ENVIRONMENT
-ENV ASPNETCORE_ENVIRONMENT $ENVIRONMENT
+ENV ASPNETCORE_ENVIRONMENT Production
 
 ENTRYPOINT ["dotnet", "myWebApp.dll"]
