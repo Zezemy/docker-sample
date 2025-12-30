@@ -63,5 +63,8 @@ RUN adduser \
     --uid "${UID}" \
     appuser
 USER appuser
+# Setup your variables before running.
+ARG ENVIRONMENT
+ENV ASPNETCORE_ENVIRONMENT $ENVIRONMENT
 
 ENTRYPOINT ["dotnet", "myWebApp.dll"]
